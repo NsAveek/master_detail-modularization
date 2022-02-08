@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(':libraries:uiComponents')
+
+    // hilt
+    implementation Deps.androidx_hilt
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    kapt Deps.androidx_hilt_kapt
+
+    // Compose
+
+    implementation Deps.compose_ui
+    implementation Deps.compose_ui_tooling
+    implementation Deps.compose_foundation
+    implementation Deps.compose_material
+    implementation Deps.compose_material_icons_core
+    implementation Deps.compose_material_icons_ext
+    implementation Deps.compose_activity_integration
+    implementation Deps.compose_viewmodel_integration
+    implementation Deps.compose_livedata
+    implementation Deps.compose_runtime_rxjava
+    androidTestImplementation Deps.compose_test
+
+    // Room
+    implementation Deps.androidx_room_runtime
+    kapt Deps.androidx_room_kapt
+    implementation Deps.androidx_room_ktx
+
+    // Paging
+    implementation Deps.androidx_paging_runtime_ktx
+    testImplementation Deps.androidx_paging_common_test
+    implementation Deps.androidx_paging_rxjava2
+    implementation Deps.androidx_paging_rxjava3
+    implementation Deps.androidx_paging_compose
+
+
+    // Retrofit
+    implementation Deps.androidx_retrofit
+    implementation Deps.androidx_retrofit_gson_conv
+    implementation Deps.androidx_retrofit_mock
+    implementation Deps.androidx_retrofit_adapter
+    implementation Deps.androidx_okhttp_interceptor
+
+    // glide
+    implementation Deps.glide_version
+    kapt Deps.glide_kapt
+
+    // Junit
+    testImplementation Deps.testlib_junit
+    androidTestImplementation Deps.test_junit_ext
+
+    // Espresso
+    androidTestImplementation Deps.testandroidx_espressocore
+}
