@@ -4,7 +4,6 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.myapplication.api.NSDataService
 import com.example.myapplication.data.NSDataRepository.Companion.NETWORK_PAGE_SIZE
-import retrofit2.HttpException
 import java.io.IOException
 
 private const val NS_STARTING_PAGE_INDEX = 1

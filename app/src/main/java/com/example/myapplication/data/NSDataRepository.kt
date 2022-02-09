@@ -6,8 +6,9 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.myapplication.api.NSDataService
 import kotlinx.coroutines.flow.Flow
+import nbl.core.network.AveekDataService
 
-class NSDataRepository (private val service : NSDataService, private val database : CatsDatabase){
+class NSDataRepository (private val service : AveekDataService, private val database : CatsDatabase){
 
     fun getCatsStreamPagingSource() : Flow<PagingData<CatsDataResponseItem>>{
         return Pager(config = PagingConfig(NETWORK_PAGE_SIZE,enablePlaceholders = false),

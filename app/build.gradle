@@ -36,7 +36,7 @@ android {
 
 dependencies {
     implementation project(':libraries:uiComponents')
-    implementatiion project(':network')
+    implementation project(':network')
 
 
     implementation Deps.androidx_core
@@ -73,14 +73,6 @@ dependencies {
     implementation Deps.androidx_paging_rxjava2
     implementation Deps.androidx_paging_rxjava3
     implementation Deps.androidx_paging_compose
-
-
-    // Retrofit
-    implementation Deps.androidx_retrofit
-    implementation Deps.androidx_retrofit_gson_conv
-    implementation Deps.androidx_retrofit_mock
-    implementation Deps.androidx_retrofit_adapter
-    implementation Deps.androidx_okhttp_interceptor
 
     // glide
     implementation Deps.glide_version

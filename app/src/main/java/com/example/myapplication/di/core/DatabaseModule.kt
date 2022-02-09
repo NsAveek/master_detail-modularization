@@ -12,7 +12,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 @Module
 object DatabaseModule {
-    @Provides
+ /*   @Provides
     @Singleton
     fun provideCatsDao( database : CatsDatabase) : CatsDao{
         return database.catsDao()
@@ -30,5 +30,5 @@ object DatabaseModule {
             CatsDatabase::class.java, "cats.com.example.myapplication.db")
             .fallbackToDestructiveMigration() // so that we do not need to change the com.example.myapplication.db version
             .build()
-    }
+    }*/
 }

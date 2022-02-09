@@ -7,7 +7,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import nbl.core.network.NBLDataService.Companion.BASE_URL
+import nbl.core.network.AveekDataService.Companion.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -18,7 +18,7 @@ import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
 @Module
-object NBLServiceModule {
+object AveekServiceModule {
 
     @Provides
     @Singleton
@@ -50,7 +50,7 @@ object NBLServiceModule {
 
     @Provides
     @Singleton
-    fun appServiceProvider(retrofit: Retrofit): NBLDataService {
-        return retrofit.create(NBLDataService::class.java)
+    fun appServiceProvider(retrofit: Retrofit): AveekDataService {
+        return retrofit.create(AveekDataService::class.java)
     }
 }

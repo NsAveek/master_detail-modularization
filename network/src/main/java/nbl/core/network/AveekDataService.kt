@@ -12,7 +12,7 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
-interface NBLDataService {
+interface AveekDataService {
 
     companion object {
         const val BASE_URL = "https://nblas.sudip.me/"

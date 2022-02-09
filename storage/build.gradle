@@ -5,40 +5,7 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
-
-android {
-    compileSdk Config.compileSdk
-
-    defaultConfig {
-        applicationId "com.example.myapplication"
-        minSdk Config.minSdk
-        targetSdk Config.targetSdk
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-}
-
 dependencies {
-
-    implementation Deps.androidx_core
-    implementation Deps.androidx_appcompat
-    implementation Deps.androidx_material
     // Junit
     testImplementation Deps.testlib_junit
     androidTestImplementation Deps.test_junit_ext
