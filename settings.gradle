@@ -2,3 +2,5 @@ rootProject.name = "My Application"
 
 include ':app'
 include ':libraries:uiComponents'
+include ':network'
+include ':storage'

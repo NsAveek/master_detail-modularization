@@ -7,12 +7,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk Config.compileSdk
 
     defaultConfig {
         applicationId "com.example.myapplication"
-        minSdk 21
-        targetSdk 31
+        minSdk Config.minSdk
+        targetSdk Config.targetSdk
         versionCode 1
         versionName "1.0"
 
@@ -26,8 +26,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility Config.javaVersion
+        targetCompatibility Config.javaVersion
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -36,12 +36,16 @@ android {
 
 dependencies {
     implementation project(':libraries:uiComponents')
+    implementatiion project(':network')
+
+
+    implementation Deps.androidx_core
+    implementation Deps.androidx_appcompat
+    implementation Deps.androidx_material
+    implementation Deps.androidx_constraintlayout
 
     // hilt
     implementation Deps.androidx_hilt
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     kapt Deps.androidx_hilt_kapt
 
     // Compose
