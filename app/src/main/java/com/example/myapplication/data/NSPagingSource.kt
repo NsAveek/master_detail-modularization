@@ -2,11 +2,13 @@ package com.example.myapplication.data
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.example.myapplication.api.AveekHomeDataService
 import com.example.myapplication.data.NSDataRepository.Companion.NETWORK_PAGE_SIZE
+import retrofit2.HttpException
 import java.io.IOException
 
 private const val NS_STARTING_PAGE_INDEX = 1
-class CatsPagingSource (private val service: NSDataService) : PagingSource<Int, CatsDataResponseItem> () {
+class CatsPagingSource (private val service: AveekHomeDataService) : PagingSource<Int, CatsDataResponseItem> () {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, CatsDataResponseItem> {
         val nextPage = params.key?: NS_STARTING_PAGE_INDEX
         return try {
