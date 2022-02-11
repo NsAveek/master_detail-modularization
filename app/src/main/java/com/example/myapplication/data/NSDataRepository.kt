@@ -4,9 +4,8 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import com.example.myapplication.api.NSDataService
 import kotlinx.coroutines.flow.Flow
-import nbl.core.network.AveekDataService
+import aveek.core.network.AveekDataService
 
 class NSDataRepository (private val service : AveekDataService, private val database : CatsDatabase){
 
