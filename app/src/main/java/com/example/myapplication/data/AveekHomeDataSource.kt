@@ -1,4 +1,5 @@
 package com.example.myapplication.data
+
 import aveek.core.network.ApiResponseResult
 import aveek.core.network.dummyModelPackage.error.ErrorResponseRemote
 import com.example.myapplication.api.AveekHomeDataService
@@ -8,7 +9,6 @@ import kotlinx.coroutines.flow.flow
 import nbl.feature.primary.login.data.model.LoginResponseRemote
 import nbl.feature.primary.login.data.model.forgotPassword.ForgotPasswordResponseRemote
 import javax.inject.Inject
-
 
 /**
  * Class that handles authentication w/ login credentials and retrieves user information.
