@@ -18,15 +18,6 @@ import javax.inject.Inject
 
 class AveekHomeDataSource @Inject constructor(private val service: AveekHomeDataService) {
 
-    /*fun login(username: String, password: String): Result<LoggedInUser> {
-        try {
-            // TODO: handle loggedInUser authentication
-            val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), "Jane Doe")
-            return Result.Success(fakeUser)
-        } catch (e: Throwable) {
-            return Result.Error(IOException("Error logging in", e))
-        }
-    }*/
     suspend fun login(userMap: HashMap<String, String>): Flow<ApiResponseResult<LoginResponseRemote>> {
         return flow {
             emit(ApiResponseResult.loading())
@@ -67,9 +58,5 @@ class AveekHomeDataSource @Inject constructor(private val service: AveekHomeData
                 }
             }
         }
-    }
-
-    fun logout() {
-        // TODO: revoke authentication
     }
 }
