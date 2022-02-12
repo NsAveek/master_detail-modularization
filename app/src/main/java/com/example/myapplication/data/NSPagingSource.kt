@@ -1,5 +1,5 @@
 package com.example.myapplication.data
-
+/*
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.myapplication.api.AveekHomeDataService
@@ -8,6 +8,7 @@ import retrofit2.HttpException
 import java.io.IOException
 
 private const val NS_STARTING_PAGE_INDEX = 1
+
 class CatsPagingSource (private val service: AveekHomeDataService) : PagingSource<Int, CatsDataResponseItem> () {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, CatsDataResponseItem> {
         val nextPage = params.key?: NS_STARTING_PAGE_INDEX
@@ -38,4 +39,4 @@ class CatsPagingSource (private val service: AveekHomeDataService) : PagingSourc
             state.closestPageToPosition(anchorPosition)?.nextKey?.minus(1)
         }
     }
-}
+}*/

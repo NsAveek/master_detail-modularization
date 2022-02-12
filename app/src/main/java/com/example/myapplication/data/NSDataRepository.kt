@@ -1,5 +1,6 @@
 package com.example.myapplication.data
 
+/*
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
@@ -30,4 +31,4 @@ class NSDataRepository (private val service : AveekDataService, private val data
     companion object {
         const val NETWORK_PAGE_SIZE = 20
     }
-}
+}*/

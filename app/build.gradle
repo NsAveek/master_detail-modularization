@@ -35,6 +35,8 @@ android {
 }
 
 dependencies {
+    implementation project(':feature:primary:master')
+    implementation project(':feature:primary:details')
     implementation project(':libraries:uiComponents')
     implementation project(':network')
 
