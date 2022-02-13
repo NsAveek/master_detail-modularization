@@ -12,7 +12,7 @@ object Versions {
 
     // <editor-fold desc="jetpack">
     val compose_version = "1.0.5"
-    val nav_version = "2.4.0-alpha03"
+    val nav_version = "2.4.1"
     val androidx_navigation = "2.3.5"
     val paging_version = "3.0.0"
     val paging_compose_version = "1.0.0-alpha14"
@@ -78,6 +78,8 @@ object Deps {
         "androidx.constraintlayout:constraintlayout:${Versions.androidx_constraintLayout}"
     val androidx_material = "com.google.android.material:material:${Versions.material}"
     val androidx_appcompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    val androidx_recyclerview =
+        "androidx.recyclerview:recyclerview:${Versions.androidx_recyclerview}"
 
     // Coroutines
     val androidx_coroutines_core =
@@ -93,8 +95,7 @@ object Deps {
         "androidx.navigation:navigation-fragment-ktx:${Versions.androidx_navigation}"
     val androidx_navigation_ui =
         "androidx.navigation:navigation-ui-ktx:${Versions.androidx_navigation}"
-    val androidx_recyclerview =
-        "androidx.recyclerview:recyclerview:${Versions.androidx_recyclerview}"
+
 
     // hilt
     val androidx_hilt_classpath =

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_details"
+    app:startDestination="@id/navigation_details_fragment">
+
+    <fragment
+        android:id="@+id/navigation_details_fragment"
+        android:name="com.example.feature.primary.details.ui.DetailFragment"
+        android:label="@string/title_details"
+        tools:preview="@layout/detail_fragment">
+        <deepLink app:uri="myApp://DetailFragment" />
+    </fragment>
+
+</navigation>

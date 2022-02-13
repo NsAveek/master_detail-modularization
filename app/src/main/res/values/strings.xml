@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Master Detail Example</string>
+    <string name="title_home">Master</string>
+    <string name="title_details">Details</string>
 </resources>

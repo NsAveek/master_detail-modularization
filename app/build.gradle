@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
@@ -45,6 +48,8 @@ dependencies {
     implementation Deps.androidx_appcompat
     implementation Deps.androidx_material
     implementation Deps.androidx_constraintlayout
+    api (Deps.androidx_navigation_fragment)
+    api (Deps.androidx_navigation_ui)
 
     // hilt
     implementation Deps.androidx_hilt
