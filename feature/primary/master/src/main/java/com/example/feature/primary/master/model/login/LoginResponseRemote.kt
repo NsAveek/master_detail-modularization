@@ -1,4 +1,5 @@
-package com.example.myapplication.data.model
+package com.example.feature.primary.master.model.login
+
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

@@ -2,16 +2,13 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
 }
-android {
-    hilt {
-        enableAggregatingTask = true
-    }
-}
+
 
 dependencies {
     implementation project(':storage')
+    implementation project(':libraries:uiComponents')
+
     // Junit
     testImplementation Deps.testlib_junit
     androidTestImplementation Deps.test_junit_ext
@@ -19,9 +16,6 @@ dependencies {
     // Espresso
     androidTestImplementation Deps.testandroidx_espressocore
 
-    // hilt
-    implementation Deps.androidx_hilt
-    kapt Deps.androidx_hilt_kapt
 
     // retrofit
     api Deps.androidx_retrofit

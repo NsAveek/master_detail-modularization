@@ -1,7 +1,7 @@
-package com.example.myapplication.di.module
+package com.example.feature.primary.master.di
 
 import aveek.core.network.ConstantsClass
-import com.example.myapplication.api.AveekHomeDataService
+import com.example.feature.primary.master.api.AveekHomeDataService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

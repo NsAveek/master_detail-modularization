@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
-    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -38,22 +37,9 @@ android {
 }
 
 dependencies {
+    implementation project(':libraries:uiComponents')
     implementation project(':feature:primary:master')
     implementation project(':feature:primary:details')
-    implementation project(':libraries:uiComponents')
-    implementation project(':network')
-
-
-    implementation Deps.androidx_core
-    implementation Deps.androidx_appcompat
-    implementation Deps.androidx_material
-    implementation Deps.androidx_constraintlayout
-    api (Deps.androidx_navigation_fragment)
-    api (Deps.androidx_navigation_ui)
-
-    // hilt
-    implementation Deps.androidx_hilt
-    kapt Deps.androidx_hilt_kapt
 
     // Compose
 
@@ -81,9 +67,7 @@ dependencies {
     implementation Deps.androidx_paging_rxjava3
     implementation Deps.androidx_paging_compose
 
-    // glide
-    implementation Deps.glide_version
-    kapt Deps.glide_kapt
+
 
     // Junit
     testImplementation Deps.testlib_junit

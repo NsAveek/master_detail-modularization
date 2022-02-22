@@ -1,9 +1,9 @@
-package com.example.myapplication.data
+package com.example.feature.primary.master.data
 
 import aveek.core.network.ApiResponseResult
+import com.example.feature.primary.master.model.login.LoginResponseRemote
+import com.example.feature.primary.master.model.login.forgotPassword.ForgotPasswordResponseRemote
 import kotlinx.coroutines.flow.Flow
-import nbl.feature.primary.login.data.model.LoginResponseRemote
-import nbl.feature.primary.login.data.model.forgotPassword.ForgotPasswordResponseRemote
 import javax.inject.Inject
 
 

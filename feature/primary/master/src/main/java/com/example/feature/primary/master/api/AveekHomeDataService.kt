@@ -1,7 +1,7 @@
-package com.example.myapplication.api
+package com.example.feature.primary.master.api
 
-import nbl.feature.primary.login.data.model.LoginResponseRemote
-import nbl.feature.primary.login.data.model.forgotPassword.ForgotPasswordResponseRemote
+import com.example.feature.primary.master.model.login.LoginResponseRemote
+import com.example.feature.primary.master.model.login.forgotPassword.ForgotPasswordResponseRemote
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST

@@ -1,8 +1,8 @@
-package com.example.myapplication.di.module
+package com.example.feature.primary.master.di
 
-import com.example.myapplication.api.AveekHomeDataService
-import com.example.myapplication.data.AveekHomeDataSource
-import com.example.myapplication.data.AveekHomeRepository
+import com.example.feature.primary.master.api.AveekHomeDataService
+import com.example.feature.primary.master.data.AveekHomeDataSource
+import com.example.feature.primary.master.data.AveekHomeRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.example.myapplication.data.model.forgotPassword
+package com.example.feature.primary.master.model.login.forgotPassword
 
 import com.google.gson.annotations.SerializedName
 

@@ -25,6 +25,7 @@ object Versions {
     val material = "1.4.0"
     val appCompat = "1.4.0"
     val lifecycle_version = "2.3.1"
+    val gson_version = "2.9.0"
     // </editor-fold>
 
     // <editor-fold desc="hilt">
@@ -46,6 +47,7 @@ object Versions {
     val glide_version = "4.12.0"
     // </editor-fold>
 
+
     // <editor-fold desc="testing">
     val junit = "4.12"
     val androidx_espresso = "3.4.0"
@@ -58,6 +60,7 @@ object Versions {
     //    val gradleandroid = "7.0.3"
     val kotlin = "1.5.20"
     val gradleversions = "0.36.0"
+
     // </editor-fold>
 
 }
@@ -163,6 +166,8 @@ object Deps {
     // Glide
     val glide_version = "com.github.bumptech.glide:glide:${Versions.glide_version}"
     val glide_kapt = "com.github.bumptech.glide:compiler:${Versions.glide_version}"
+
+    val gson_version = "com.google.code.gson:gson:${Versions.gson_version}"
 
     // Junit
     val testlib_junit = "junit:junit:${Versions.junit}"
