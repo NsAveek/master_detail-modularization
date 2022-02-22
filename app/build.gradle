@@ -31,7 +31,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
+    buildFeatures { // Apply this in every feature module where databinding is required
         dataBinding true
     }
 }
@@ -59,14 +59,6 @@ dependencies {
     implementation Deps.androidx_room_runtime
     kapt Deps.androidx_room_kapt
     implementation Deps.androidx_room_ktx
-
-    // Paging
-    implementation Deps.androidx_paging_runtime_ktx
-    testImplementation Deps.androidx_paging_common_test
-    implementation Deps.androidx_paging_rxjava2
-    implementation Deps.androidx_paging_rxjava3
-    implementation Deps.androidx_paging_compose
-
 
 
     // Junit

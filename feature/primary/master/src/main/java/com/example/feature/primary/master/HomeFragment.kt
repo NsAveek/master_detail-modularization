@@ -11,6 +11,7 @@ import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.fragment.findNavController
 import com.example.feature.primary.master.databinding.HomeFragmentBinding
 
+
 class HomeFragment : Fragment() {
 
     companion object {

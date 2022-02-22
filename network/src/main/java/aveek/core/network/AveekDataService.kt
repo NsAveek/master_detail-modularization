@@ -1,12 +1,5 @@
 package aveek.core.network
 
-import aveek.core.network.dummyModelPackage.attendance.AttendanceResponseRemote
-import aveek.core.network.dummyModelPackage.attendance_status.AttendanceStatusResponseRemote
-import aveek.core.network.dummyModelPackage.login.LoginResponseRemote
-import aveek.core.network.dummyModelPackage.login.forgotPassword.ForgotPasswordResponseRemote
-import aveek.core.network.dummyModelPackage.profile_get.ProfileResponseGetRemote
-import aveek.core.network.dummyModelPackage.profile_update.ProfileUpdateResponseRemote
-import aveek.core.network.dummyModelPackage.profile_update.password.PasswordResponseRemote
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -19,6 +12,7 @@ interface AveekDataService {
         const val NETWORK_PAGE_SIZE = 20
     }
 
+/*
     @POST("api/login")
     suspend fun loginRequest(@Body user : Map<String , String>) : Response<LoginResponseRemote>
 
@@ -48,6 +42,7 @@ interface AveekDataService {
 //    @GET("api/exception-attendance")
 //    suspend fun exceptionAttedance(@Path page : Int) : Response<ForgotPasswordResponseRemote>
 
+*/
 
 
 }
