@@ -26,6 +26,8 @@ dependencies {
     api Deps.androidx_constraintlayout
     api Deps.androidx_navigation_fragment
     api Deps.androidx_navigation_ui
+//    api Deps.androidx_lifecycle_livedata
+//    api Deps.androidx_lifecycle_viewmodel
 
     // GLIDE
     api Deps.glide_version

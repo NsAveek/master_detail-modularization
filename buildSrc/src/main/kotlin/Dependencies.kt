@@ -83,6 +83,8 @@ object Deps {
     val androidx_appcompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     val androidx_recyclerview =
         "androidx.recyclerview:recyclerview:${Versions.androidx_recyclerview}"
+//    val androidx_lifecycle_livedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle_version}"
+//    val androidx_lifecycle_viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_version}"
 
     // Coroutines
     val androidx_coroutines_core =
