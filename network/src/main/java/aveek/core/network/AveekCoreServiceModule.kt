@@ -7,7 +7,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import aveek.core.network.AveekDataService.Companion.BASE_URL
+import aveek.core.network.AveekCoreDataService.Companion.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -18,7 +18,7 @@ import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
 @Module
-object AveekServiceModule {
+object AveekCoreServiceModule {
 
     @Provides
     @Singleton
