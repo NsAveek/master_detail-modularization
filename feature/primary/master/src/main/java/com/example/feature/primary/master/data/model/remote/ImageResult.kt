@@ -1,4 +1,4 @@
-package com.example.feature.primary.master.data.remote.responses
+package com.example.feature.primary.master.data.model.remote
 
 import com.google.gson.annotations.SerializedName
 

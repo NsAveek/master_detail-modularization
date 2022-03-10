@@ -1,7 +1,7 @@
 package com.example.feature.primary.master.di
 
 import aveek.core.network.ConstantsClass
-import com.example.feature.primary.master.api.AveekHomeDataService
+import com.example.feature.primary.master.api.PixabayHomeDataService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,7 +18,7 @@ object AveekHomeBaseModule {
     }
     @Provides
     @ActivityRetainedScoped
-    fun appServiceProvider(retrofit: Retrofit): AveekHomeDataService {
-        return retrofit.create(AveekHomeDataService::class.java)
+    fun appServiceProvider(retrofit: Retrofit): PixabayHomeDataService {
+        return retrofit.create(PixabayHomeDataService::class.java)
     }
 }

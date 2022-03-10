@@ -7,18 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.net.toUri
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.fragment.findNavController
 import com.example.feature.primary.master.databinding.HomeFragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     companion object {
         fun newInstance() = HomeFragment()
     }
 
-    private lateinit var viewModel: HomeViewModel
+    private val viewModel: HomeViewModel by viewModels<HomeViewModel>()
     private lateinit var _binding : HomeFragmentBinding
 
     override fun onCreateView(
@@ -26,21 +28,25 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = HomeFragmentBinding.inflate(inflater, container, false)
-        _binding!!.btnDetailsFragment.setOnClickListener {
-            val request = NavDeepLinkRequest.Builder
-                .fromUri("myApp://DetailFragment".toUri())
-                .build()
-            findNavController().navigate(request)
+        with(_binding){
+            viewmodel = viewModel
+
+            btnDetailsFragment.setOnClickListener {
+                val request = NavDeepLinkRequest.Builder
+                    .fromUri("myApp://DetailFragment".toUri())
+                    .build()
+                findNavController().navigate(request)
+            }
+
+            btnLoadDataDetailsFragment.setOnClickListener {
+
+            }
         }
+
+
+
         return _binding?.let {
             it.root
         }
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
-        // TODO: Use the ViewModel
-    }
-
 }

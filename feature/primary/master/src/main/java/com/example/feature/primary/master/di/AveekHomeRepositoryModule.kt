@@ -1,8 +1,8 @@
 package com.example.feature.primary.master.di
 
-import com.example.feature.primary.master.api.AveekHomeDataService
+import com.example.feature.primary.master.api.PixabayHomeDataService
 import com.example.feature.primary.master.data.AveekHomeDataSource
-import com.example.feature.primary.master.data.AveekHomeRepository
+import com.example.feature.primary.master.data.PixabayHomeRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +15,7 @@ object AveekHomeRepositoryModule {
     @Provides
     @ViewModelScoped
     fun provideHomeDataSource(
-        service: AveekHomeDataService
+        service: PixabayHomeDataService
     ): AveekHomeDataSource {
         return AveekHomeDataSource(service)
     }
@@ -23,8 +23,9 @@ object AveekHomeRepositoryModule {
     @Provides
     @ViewModelScoped
     fun provideHomeDataRepository(
+        service: PixabayHomeDataService,
         dataSource: AveekHomeDataSource
-    ): AveekHomeRepository {
-        return AveekHomeRepository(dataSource)
+    ): PixabayHomeRepository {
+        return PixabayHomeRepository(service,dataSource)
     }
 }

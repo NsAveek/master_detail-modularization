@@ -2,7 +2,7 @@ package com.example.feature.primary.master.data
 
 import aveek.core.network.ApiResponseResult
 import aveek.core.network.ErrorResponseRemote
-import com.example.feature.primary.master.api.AveekHomeDataService
+import com.example.feature.primary.master.api.PixabayHomeDataService
 import com.example.feature.primary.master.model.login.LoginResponseRemote
 import com.example.feature.primary.master.model.login.forgotPassword.ForgotPasswordResponseRemote
 import com.google.gson.Gson
@@ -16,7 +16,8 @@ import javax.inject.Inject
 
 // TODO : Throw JSON Object from Network Module as response
 
-class AveekHomeDataSource @Inject constructor(private val service: AveekHomeDataService) {
+class AveekHomeDataSource @Inject constructor(private val service: PixabayHomeDataService) {
+
 
     suspend fun login(userMap: HashMap<String, String>): Flow<ApiResponseResult<LoginResponseRemote>> {
         return flow {
