@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
             }
 
             btnLoadDataDetailsFragment.setOnClickListener {
-
+                viewmodel.fetchImagesFromServer()
             }
         }
 

@@ -7,10 +7,12 @@
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22552083333333334" />
         <entry key="feature/primary/details/src/main/res/layout/detail_fragment.xml" value="0.375" />
+        <entry key="feature/primary/master/src/main/res/drawable/ic_launcher_background.xml" value="0.25104166666666666" />
         <entry key="feature/primary/master/src/main/res/layout/activity_home.xml" value="0.321875" />
         <entry key="feature/primary/master/src/main/res/layout/activity_main.xml" value="0.1890625" />
         <entry key="feature/primary/master/src/main/res/layout/home_fragment.xml" value="0.27395833333333336" />
         <entry key="feature/primary/master/src/main/res/layout/layout_flower_single.xml" value="0.2578125" />
+        <entry key="feature/primary/master/src/main/res/layout/separator.xml" value="0.23489583333333333" />
       </map>
     </option>
   </component>
