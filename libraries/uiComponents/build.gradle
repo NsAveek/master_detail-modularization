@@ -1,26 +1,33 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
-    id 'kotlin-kapt'
 }
 android {
-    hilt {
-        enableAggregatingTask = true
-    }
+//    hilt {
+//        enableAggregatingTask = true
+//    }
     buildFeatures {
         dataBinding true
+    }
+    kapt {
+        correctErrorTypes = true
     }
 }
 dependencies {
 
     // HILT
     api Deps.androidx_hilt
-    kapt Deps.androidx_hilt_kapt
+    api Deps.androidx_hilt_navigation
+    kapt (Deps.androidx_hilt_kapt)
 
     // ANDROIDX-CORE
     api Deps.androidx_core
+    api Deps.androidx_appcompat
+    api Deps.androidx_recyclerview
+    api Deps.androidx_fragment
     api Deps.androidx_appcompat
     api Deps.androidx_material
     api Deps.androidx_constraintlayout

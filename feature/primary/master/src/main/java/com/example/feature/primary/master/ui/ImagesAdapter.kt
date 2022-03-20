@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.feature.primary.master.R
 import com.example.feature.primary.master.data.model.local.UiModel
-import com.example.feature.primary.master.data.model.remote.ImageResult
 import java.lang.UnsupportedOperationException
+import javax.inject.Inject
 
-class ImagesAdapter : PagingDataAdapter<UiModel, RecyclerView.ViewHolder> (IMAGE_COMPARATOR) {
+class ImagesAdapter @Inject constructor(): PagingDataAdapter<UiModel, RecyclerView.ViewHolder> (IMAGE_COMPARATOR) {
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val uiModel = getItem(position)
@@ -22,7 +22,7 @@ class ImagesAdapter : PagingDataAdapter<UiModel, RecyclerView.ViewHolder> (IMAGE
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return if (viewType == R.layout.layout_flower_single){
+        return if (viewType == R.layout.layout_image_single){
             ImageViewHolder.create(parent)
         }else{
             SeparatorViewHolder.create(parent)
@@ -31,7 +31,7 @@ class ImagesAdapter : PagingDataAdapter<UiModel, RecyclerView.ViewHolder> (IMAGE
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)){
-            is UiModel.Response -> R.layout.layout_flower_single
+            is UiModel.Response -> R.layout.layout_image_single
             is UiModel.ItemSeparator -> R.layout.home_fragment
             null -> throw UnsupportedOperationException("Unknown View")
         }

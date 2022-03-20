@@ -4,7 +4,7 @@ import android.util.Log
 
 
 
-class Logger: ILogger {
+class LoggerNetworkModule: ILogger {
 
     init {
         Log.d(TAG_DEBUG, "Logger object created with ID: ${System.identityHashCode(this)}")

@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -40,6 +41,11 @@ dependencies {
     implementation project(':libraries:uiComponents')
     implementation project(':feature:primary:master')
     implementation project(':feature:primary:details')
+
+    // HILT
+    implementation Deps.androidx_hilt
+    implementation Deps.androidx_hilt_navigation
+    kapt (Deps.androidx_hilt_kapt)
 
     // Compose
 

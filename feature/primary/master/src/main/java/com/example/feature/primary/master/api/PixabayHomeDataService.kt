@@ -9,13 +9,14 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query
+import javax.inject.Inject
 
 interface PixabayHomeDataService {
 
     @GET("/api/")
     suspend fun searchForImage(
         @Query("q") searchQuery : String,
-        @Query("key") apiKey : String = API_KEY,
+        @Query("key") apiKey : String = "25611757-fd1576c22394e7d3d4b94dc09",
         @Query("page") page: Int,
         @Query("per_page") itemsPerPage: Int
     ) : ImageResponse

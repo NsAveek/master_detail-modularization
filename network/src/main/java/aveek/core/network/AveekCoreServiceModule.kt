@@ -22,29 +22,29 @@ object AveekCoreServiceModule {
 
     @Provides
     @Singleton
-    fun providesLogger(): ILogger = Logger()
+    fun providesLogger(): ILogger = LoggerNetworkModule()
 
-    @Provides
-    @Singleton
-    fun provideRetrofitInstance(sharedPreferences: SharedPreferences): Retrofit {
-        val logger = HttpLoggingInterceptor()
-        logger.level = HttpLoggingInterceptor.Level.BASIC
-
-        val clientBuilder = OkHttpClient.Builder()
-//            .addInterceptor(logger)
-            .connectTimeout(1, TimeUnit.MINUTES)
-            .readTimeout(30, TimeUnit.SECONDS)
-            .writeTimeout(15, TimeUnit.SECONDS)
-            .addInterceptor(TokenInterceptor(sharedPreferences))
-            .build()
-        val gson = GsonBuilder()
-            .setLenient()
-            .create()
-        return Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .client(clientBuilder)
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build()
-    }
+//    @Provides
+//    @Singleton
+//    fun provideRetrofitInstance(sharedPreferences: SharedPreferences): Retrofit {
+//        val logger = HttpLoggingInterceptor()
+//        logger.level = HttpLoggingInterceptor.Level.BASIC
+//
+//        val clientBuilder = OkHttpClient.Builder()
+////            .addInterceptor(logger)
+//            .connectTimeout(1, TimeUnit.MINUTES)
+//            .readTimeout(30, TimeUnit.SECONDS)
+//            .writeTimeout(15, TimeUnit.SECONDS)
+//            .addInterceptor(TokenInterceptor(sharedPreferences))
+//            .build()
+//        val gson = GsonBuilder()
+//            .setLenient()
+//            .create()
+//        return Retrofit.Builder()
+//            .baseUrl(BASE_URL)
+//            .client(clientBuilder)
+//            .addConverterFactory(GsonConverterFactory.create(gson))
+//            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+//            .build()
+//    }
 }

@@ -1,3 +1,5 @@
 <resources>
     <string name="title_home">Master</string>
+    <string name="retry">Retry</string>
+    <string name="no_results">No results 😓</string>
 </resources>

@@ -37,7 +37,7 @@ class ImageViewHolder (private val view : View): RecyclerView.ViewHolder(view) {
 
     companion object{
         fun create( parent : ViewGroup) : ImageViewHolder{
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_flower_single,parent, false)
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_image_single,parent, false)
             return ImageViewHolder(view)
         }
     }

@@ -14,22 +14,24 @@ object Versions {
     val compose_version = "1.0.5"
     val nav_version = "2.4.1"
     val androidx_navigation = "2.3.5"
-    val paging_version = "3.0.0"
+    val paging_version = "3.1.0-beta01"
     val paging_compose_version = "1.0.0-alpha14"
     // </editor-fold>
 
     // <editor-fold desc="google">
     val androidx_core = "1.7.0"
+    val androidx_fragment_version = "1.4.1"
     val androidx_recyclerview = "1.2.1"
     val androidx_constraintLayout = "2.1.3"
     val material = "1.4.0"
-    val appCompat = "1.4.0"
-    val lifecycle_version = "2.3.1"
+    val appCompat = "1.4.1"
+    val lifecycle_version = "2.4.1"
     val gson_version = "2.9.0"
     // </editor-fold>
 
     // <editor-fold desc="hilt">
     val hilt_version = "2.40"
+    val hilt_nav_compose_version = "1.0.0"
     // </editor-fold>
 
     // <editor-fold desc="retrofit">
@@ -67,14 +69,16 @@ object Versions {
 
 object Deps {
 
-    // Gradle
+    // <editor-fold desc="Gradle"
+
     val tools_gradleandroid = "com.android.tools.build:gradle:${Versions.gradleandroid}"
     val tools_kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     val tools_gradleversions =
         "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleversions}"
 
+    // </editor-fold>
 
-    // Android - Core
+    // <editor-fold desc="Android - Core"
 
     val androidx_core = "androidx.core:core-ktx:${Versions.androidx_core}"
     val androidx_constraintlayout =
@@ -83,17 +87,21 @@ object Deps {
     val androidx_appcompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     val androidx_recyclerview =
         "androidx.recyclerview:recyclerview:${Versions.androidx_recyclerview}"
+    val androidx_fragment = "androidx.fragment:fragment-ktx:${Versions.androidx_fragment_version}"
 //    val androidx_lifecycle_livedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle_version}"
 //    val androidx_lifecycle_viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_version}"
 
-    // Coroutines
+    // </editor-fold>
+
+    // <editor-fold desc="Coroutines"
     val androidx_coroutines_core =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines_version}"
     val androidx_coroutines_android =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines_version}"
 
+    // </editor-fold>
 
-    // navigation
+    //  <editor-fold desc="Navigation"
     val androidx_navigation_safeargs =
         "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.nav_version}"
     val androidx_navigation_fragment =
@@ -101,12 +109,15 @@ object Deps {
     val androidx_navigation_ui =
         "androidx.navigation:navigation-ui-ktx:${Versions.androidx_navigation}"
 
+    // </editor-fold>
 
-    // hilt
+    // <editor-fold desc="Hilt"
     val androidx_hilt_classpath =
         "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt_version}"
     val androidx_hilt = "com.google.dagger:hilt-android:${Versions.hilt_version}"
     val androidx_hilt_kapt = "com.google.dagger:hilt-android-compiler:${Versions.hilt_version}"
+    val androidx_hilt_navigation = "androidx.hilt:hilt-navigation-compose:${Versions.hilt_nav_compose_version}"
+    // </editor-fold>
 
     // Compose
 

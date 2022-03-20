@@ -3,11 +3,8 @@ package com.example.feature.primary.master.data
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import aveek.core.network.ApiResponseResult
 import com.example.feature.primary.master.api.PixabayHomeDataService
 import com.example.feature.primary.master.data.model.remote.ImageResult
-import com.example.feature.primary.master.model.login.LoginResponseRemote
-import com.example.feature.primary.master.model.login.forgotPassword.ForgotPasswordResponseRemote
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
@@ -21,12 +18,12 @@ class PixabayHomeRepository @Inject constructor
             pagingSourceFactory = { PixabayPagingSource(service, queryString) }
         ).flow
     }
-    suspend fun login(userMap : HashMap<String, String>): Flow<ApiResponseResult<LoginResponseRemote>> {
-        return imageSearchDataSource.login(userMap)
-    }
-    suspend fun forgotPassword(email : HashMap<String, String>): Flow<ApiResponseResult<ForgotPasswordResponseRemote>> {
-        return imageSearchDataSource.forgotPassword(email)
-    }
+//    suspend fun login(userMap : HashMap<String, String>): Flow<ApiResponseResult<LoginResponseRemote>> {
+//        return imageSearchDataSource.login(userMap)
+//    }
+//    suspend fun forgotPassword(email : HashMap<String, String>): Flow<ApiResponseResult<ForgotPasswordResponseRemote>> {
+//        return imageSearchDataSource.forgotPassword(email)
+//    }
 
     companion object {
         private const val NETWORK_PAGE_SIZE = 50

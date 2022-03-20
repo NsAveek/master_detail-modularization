@@ -6,14 +6,16 @@ import com.example.feature.primary.master.data.PixabayHomeRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.components.FragmentComponent
 import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.android.scopes.FragmentScoped
 import dagger.hilt.android.scopes.ViewModelScoped
 
-@InstallIn(ViewModelComponent::class)
+@InstallIn(FragmentComponent::class)
 @Module
-object AveekHomeRepositoryModule {
+object HomeFragmentRepositoryModule {
     @Provides
-    @ViewModelScoped
+    @FragmentScoped
     fun provideHomeDataSource(
         service: PixabayHomeDataService
     ): AveekHomeDataSource {
@@ -21,7 +23,7 @@ object AveekHomeRepositoryModule {
     }
 
     @Provides
-    @ViewModelScoped
+    @FragmentScoped
     fun provideHomeDataRepository(
         service: PixabayHomeDataService,
         dataSource: AveekHomeDataSource

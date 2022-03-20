@@ -1,6 +1,8 @@
 package aveek.core.network
 
-class ConstantsClass {
+import javax.inject.Inject
+
+class ConstantsClass @Inject constructor(){
 
     enum class Constants{
         IS_LOGGED_IN,
