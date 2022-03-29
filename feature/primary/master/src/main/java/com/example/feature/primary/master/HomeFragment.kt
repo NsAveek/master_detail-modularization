@@ -40,13 +40,11 @@ class HomeFragment : Fragment() {
     private val homeFragmentViewModel: HomeViewModel by viewModels()
     private lateinit var _binding : HomeFragmentBinding
 
-    private lateinit var recyclerView : RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        homeFragmentViewModel = ViewModelProvider(this, ViewModelFactory).get(HomeViewModel::class.java)
         _binding = HomeFragmentBinding.inflate(inflater)
         with(_binding){
 
