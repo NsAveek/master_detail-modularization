@@ -5,6 +5,7 @@ import androidx.paging.PagingState
 import com.example.feature.primary.master.api.PixabayHomeDataService
 import com.example.feature.primary.master.data.AveekCoreDataService.Companion.NETWORK_PAGE_SIZE
 import com.example.feature.primary.master.data.model.remote.ImageResult
+import com.example.uicomponents.conf.PrivateConf
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
@@ -28,7 +29,7 @@ class PixabayPagingSource @Inject constructor(
         val apiQuery = query
         return try {
             val response =
-                service.searchForImage(query, page = position, itemsPerPage = params.loadSize)
+                service.searchForImage(query, PrivateConf.API_KEY,page = position, itemsPerPage = params.loadSize)
             response?.let {
                 val images = it.hits
                 val nextKey = if (images.isEmpty()) {

@@ -10,22 +10,15 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
-import androidx.paging.cachedIn
-import androidx.paging.insertSeparators
-import androidx.paging.map
-import androidx.recyclerview.widget.RecyclerView
 import com.example.feature.primary.master.data.PixabayHomeRepository
-import com.example.feature.primary.master.data.model.local.UiModel
 import com.example.feature.primary.master.databinding.HomeFragmentBinding
 import com.example.feature.primary.master.ui.ImagesAdapter
 import com.example.feature.primary.master.ui.ImagesLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -38,14 +31,27 @@ class HomeFragment : Fragment() {
     lateinit var adapter : ImagesAdapter
 
     private val homeFragmentViewModel: HomeViewModel by viewModels()
+
     private lateinit var _binding : HomeFragmentBinding
 
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = HomeFragmentBinding.inflate(inflater)
+//        DaggerHomeFragmentComponent.builder()
+//            .context(_binding.root.context)
+//            .appDependencies(
+//                EntryPointAccessors.fromApplication(
+//                    _binding.root.context.applicationContext,
+//                    INetworkModuleDependencies::class.java
+//                )
+//            )
+
         with(_binding){
 
             btnDetailsFragment.setOnClickListener {

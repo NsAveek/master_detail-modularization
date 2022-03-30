@@ -34,6 +34,11 @@ object Versions {
     val hilt_nav_compose_version = "1.0.0"
     // </editor-fold>
 
+
+    // <editor-fold desc="dagger">
+    val dagger_version = "2.41"
+    // </editor-fold>
+
     // <editor-fold desc="retrofit">
     val retrofit_version = "2.9.0"
     val okhttpLoggingInterceptor_version = "4.9.0"
@@ -117,6 +122,16 @@ object Deps {
     val androidx_hilt = "com.google.dagger:hilt-android:${Versions.hilt_version}"
     val androidx_hilt_kapt = "com.google.dagger:hilt-android-compiler:${Versions.hilt_version}"
     val androidx_hilt_navigation = "androidx.hilt:hilt-navigation-compose:${Versions.hilt_nav_compose_version}"
+    // </editor-fold>
+
+    // <editor-fold desc="Dagger"
+    val androidx_dagger_core = "com.google.dagger:dagger:${Versions.dagger_version}"
+    val androidx_dagger_core_annotation = "com.google.dagger:dagger-compiler:${Versions.dagger_version}"
+    val androidx_dagger = "com.google.dagger:dagger-android:${Versions.dagger_version}"
+    val androidx_dagger_support = "com.google.dagger:dagger-android-support:${Versions.dagger_version}"
+    val androidx_dagger_annotation = "com.google.dagger:dagger-android-processor:${Versions.dagger_version}"
+
+
     // </editor-fold>
 
     // Compose

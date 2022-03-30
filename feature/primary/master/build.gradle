@@ -13,20 +13,13 @@ android{
 
 dependencies {
 
-//    implementation project(':network')
+    implementation project(':network')
     implementation project(':libraries:uiComponents')
 
     // HILT
     implementation Deps.androidx_hilt
     implementation Deps.androidx_hilt_navigation
     kapt (Deps.androidx_hilt_kapt)
-
-    // retrofit
-    api Deps.androidx_retrofit
-    api Deps.androidx_retrofit_gson_conv
-    api Deps.androidx_retrofit_mock
-    api Deps.androidx_retrofit_adapter
-    api Deps.androidx_okhttp_interceptor
 
     // Paging
     implementation Deps.androidx_paging_runtime_ktx

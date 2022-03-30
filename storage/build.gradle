@@ -7,6 +7,12 @@ plugins {
 dependencies {
 
     implementation project( ':libraries:uiComponents')
+
+    // Room
+    api Deps.androidx_room_runtime
+    api Deps.androidx_room_ktx
+    kapt Deps.androidx_room_kapt
+
     // Junit
     testImplementation Deps.testlib_junit
     androidTestImplementation Deps.test_junit_ext

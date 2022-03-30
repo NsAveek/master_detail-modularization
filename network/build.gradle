@@ -2,12 +2,13 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 
 dependencies {
-    implementation project(':storage')
-    implementation project(':libraries:uiComponents')
+//    implementation project(':storage')
+//    implementation project(':libraries:uiComponents')
 
     // Junit
     testImplementation Deps.testlib_junit
@@ -16,6 +17,11 @@ dependencies {
     // Espresso
     androidTestImplementation Deps.testandroidx_espressocore
 
+
+    // HILT
+    api Deps.androidx_hilt
+    api Deps.androidx_hilt_navigation
+    kapt (Deps.androidx_hilt_kapt)
 
     // retrofit
     api Deps.androidx_retrofit
