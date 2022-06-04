@@ -3,6 +3,7 @@ package com.example.feature.primary.master.data
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
+import aveek.core.network.networkcore.INetworkCoreDataService.Companion.NETWORK_PAGE_SIZE
 import com.example.feature.primary.master.api.PixabayHomeDataService
 import com.example.feature.primary.master.data.model.remote.ImageResult
 import kotlinx.coroutines.flow.Flow
@@ -24,9 +25,4 @@ class PixabayHomeRepository @Inject constructor
 //    suspend fun forgotPassword(email : HashMap<String, String>): Flow<ApiResponseResult<ForgotPasswordResponseRemote>> {
 //        return imageSearchDataSource.forgotPassword(email)
 //    }
-
-    companion object {
-        private const val NETWORK_PAGE_SIZE = 50
-    }
-
 }

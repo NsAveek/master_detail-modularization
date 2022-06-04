@@ -1,9 +1,11 @@
-package com.example.feature.primary.master.di
+package com.example.feature.primary.master.di.modules
 
 
 
 
 import com.example.feature.primary.master.api.PixabayHomeDataService
+import com.example.feature.primary.master.di.ILogger
+import com.example.feature.primary.master.di.LoggerHomeFragment
 import com.example.feature.primary.master.ui.ImagesAdapter
 import dagger.Module
 import dagger.Provides
@@ -11,7 +13,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityRetainedComponent
 import dagger.hilt.android.scopes.ActivityRetainedScoped
 import retrofit2.Retrofit
-import javax.inject.Inject
 
 @InstallIn(ActivityRetainedComponent::class)
 @Module

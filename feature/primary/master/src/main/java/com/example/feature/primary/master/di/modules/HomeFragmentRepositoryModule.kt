@@ -1,4 +1,4 @@
-package com.example.feature.primary.master.di
+package com.example.feature.primary.master.di.modules
 
 import com.example.feature.primary.master.api.PixabayHomeDataService
 import com.example.feature.primary.master.data.AveekHomeDataSource
